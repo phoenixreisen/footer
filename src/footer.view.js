@@ -95,8 +95,8 @@ const Footer = {
                         </li>
                     </ul>
                     <div class="footer__logos">
-                        <span class="footer__logo"><img src={require('./DRV-Logo.png')} /></span>
-                        <span class="footer__logo"><img src={require('./QG-Logo.svg')} /></span>
+                        <span class="footer__logo"><img src={require('./icons/DRV-Logo.png')} /></span>
+                        <span class="footer__logo"><img src={require('./icons/QG-Logo.svg')} /></span>
                     </div>
                 </div>
             </footer>
