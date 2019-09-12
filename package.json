@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "hg",
-    "url": "ssh://hg@bitbucket.org/phoenixreisen/footer"
+    "url": "https://github.com/phoenixreisen/footer"
   },
   "license": "MIT",
   "devDependencies": {
