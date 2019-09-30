@@ -12,6 +12,8 @@ Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-syste
 npm install --save @phoenixreisen/footer
 ```
 
+## Anwendung
+
 ```js
 import Footer from '@phoenixreisen/footer';
 
@@ -19,6 +21,8 @@ import Footer from '@phoenixreisen/footer';
 
 const Footer = require('@phoenixreisen/footer');
 ```
+
+#### Aufruf
 
 ```js
 // @param url verlinkt das Logo entsprechend

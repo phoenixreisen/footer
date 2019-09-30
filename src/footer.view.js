@@ -7,7 +7,7 @@ const Footer = {
         const urls = Object.assign({}, interns, externs);
 
         return (
-            <footer class={`footer ${env && env === 'staging' ? 'staging' : ''}`}>
+            <footer class={`phx-footer ${env && env === 'staging' ? 'staging' : ''}`}>
                 <div class="social-media">
                     <div class="mb1"><strong>{headline || 'Sie finden uns auch auf'}</strong></div>
                     <div class="social-media__icons">
@@ -43,60 +43,60 @@ const Footer = {
                         <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
                     </div>
                 </div>
-                <div class="wrapper wrapper--large footer__wrapper">
-                    <ul class="footer__menu noprint">
-                        <li class="footer__menu-item">
+                <div class="wrapper wrapper--large phx-footer__wrapper">
+                    <ul class="phx-footer__menu noprint">
+                        <li class="phx-footer__menu-item">
                             <a href="https://www.phoenixreisen.com/profibereich.html" 
                                 title="zum Reisebüro-/Profibereich"
-                                class="footer__menu-link">
+                                class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Reisebüro-/Profibereich
                             </a>
                         </li>
-                        <li class="footer__menu-item">
+                        <li class="phx-footer__menu-item">
                             <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" 
                                 title="zu unseren AGB"
-                                class="footer__menu-link">
+                                class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 AGB
                             </a>
                         </li>
-                        <li class="footer__menu-item">
+                        <li class="phx-footer__menu-item">
                             <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" 
                                 title="zu unserer Datenschutzerklärung"
-                                class="footer__menu-link">
+                                class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Datenschutzerklärung
                             </a>
                         </li>
-                        <li class="footer__menu-item">
+                        <li class="phx-footer__menu-item">
                             <a href="https://www.phoenixreisen.com/kontakt.html" 
                                 title="zu unserer Kontaktseite"
-                                class="footer__menu-link">
+                                class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Kontakt
                             </a>
                         </li>
-                        <li class="footer__menu-item">
+                        <li class="phx-footer__menu-item">
                             <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" 
                                 title="zu unseren Nutzungsbedingungen"
-                                class="footer__menu-link">
+                                class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Nutzungsbedingungen
                             </a>
                         </li>
-                        <li class="footer__menu-item">
+                        <li class="phx-footer__menu-item">
                             <a href="https://www.phoenixreisen.com/impressum.html" 
                                 title="zu unserem Impressum"
-                                class="footer__menu-link">
+                                class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Impressum
                             </a>
                         </li>
                     </ul>
-                    <div class="footer__logos">
-                        <span class="footer__logo"><img src={require('./icons/DRV-Logo.png')} /></span>
-                        <span class="footer__logo"><img src={require('./icons/QG-Logo.svg')} /></span>
+                    <div class="phx-footer__logos">
+                        <span class="phx-footer__logo"><img src={require('./icons/DRV-Logo.png')} /></span>
+                        <span class="phx-footer__logo"><img src={require('./icons/QG-Logo.svg')} /></span>
                     </div>
                 </div>
             </footer>
