@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/footer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Standard-Footer für diverse Web Applikationen von Phoenix Reisen",
   "homepage": "https://www.phoenixreisen.com",
   "main": "src/phx.footer.view.js",
