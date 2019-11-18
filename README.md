@@ -15,25 +15,24 @@ npm install --save @phoenixreisen/footer
 ## Anwendung
 
 ```js
+// oder ES6+
 import Footer from '@phoenixreisen/footer';
 
-//oder
-
+// entweder CommonJS
 const Footer = require('@phoenixreisen/footer');
 ```
 
 #### Aufruf
 
 ```js
-// @param url verlinkt das Logo entsprechend
-// @param version wird standardmäßig unter dem Logo angezeigt
-
-<Footer headline="für etwas Vorfreude" env="staging" />
+<Footer headline="für etwas Vorfreude" env="[staging|production]" />
 
 //oder
 
-m(Footer, { headline:"für etwas Vorfreude", env:"staging" });
+m(Footer, { headline:"für etwas Vorfreude", env:"[staging|production]" });
 ```
+
+Wird für `env` "staging" angegeben, wird `border-top` gelb eingefärbt.
 
 ## Test
 
