@@ -1,4 +1,4 @@
-const Config = {
+export const Config = {
     "headline": "Sie finden uns auch auf",
     "urls": {
         "PHXTV": "https://www.phoenixreisen.tv/",
@@ -12,6 +12,4 @@ const Config = {
     },
 };
 
-if(typeof module !== 'undefined') {
-    module.exports = Config;
-}
+export default Config;

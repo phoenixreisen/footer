@@ -37,8 +37,8 @@ test.spec('Dateicheck', () => {
 });
 
 test.spec('Oberflächencheck', () => {
-    const Footer = require('../test/footer.view.js');
-    const Config = require('../test/config.js');
+    const Footer = require('../dist/footer.m.js').default;
+    const Config = require('../dist/config.js').default;
     const footer = mq(Footer);
 
     test('Fallback Slogan wird gesetzt', () => {

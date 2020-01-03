@@ -1,6 +1,7 @@
-const Config = require('./config.js');
+import Config from './config';
 
-const Footer = {
+export const Footer = {
+
     view: (v) => {
         const { urls:interns } = Config;
         const { headline, env, urls:externs } = v.attrs;
@@ -37,7 +38,7 @@ const Footer = {
                 <div class="social-contact mt2 tc">
                     <div><small>Wir sind für Sie da</small></div>
                     <div>
-                        <strong><a href="tel:+4922892600" title="Telefonnummer aufrufen">+49 (228) 9260-0</a></strong> oder 
+                        <strong><a href="tel:+4922892600" title="Telefonnummer aufrufen">+49 (228) 9260-0</a></strong> oder
                         über <strong><a href="https://www.phoenixreisen.com/kontakt.html" title="Kontaktformular" target="_blank" rel="noopener noreferrer">Kontaktformular</a></strong>
                         <br />
                         <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
@@ -46,7 +47,7 @@ const Footer = {
                 <div class="wrapper wrapper--large phx-footer__wrapper">
                     <ul class="phx-footer__menu noprint">
                         <li class="phx-footer__menu-item">
-                            <a href="https://www.phoenixreisen.com/profibereich.html" 
+                            <a href="https://www.phoenixreisen.com/profibereich.html"
                                 title="zum Reisebüro-/Profibereich"
                                 class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
@@ -54,7 +55,7 @@ const Footer = {
                             </a>
                         </li>
                         <li class="phx-footer__menu-item">
-                            <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" 
+                            <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html"
                                 title="zu unseren AGB"
                                 class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
@@ -62,7 +63,7 @@ const Footer = {
                             </a>
                         </li>
                         <li class="phx-footer__menu-item">
-                            <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" 
+                            <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html"
                                 title="zu unserer Datenschutzerklärung"
                                 class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
@@ -70,7 +71,7 @@ const Footer = {
                             </a>
                         </li>
                         <li class="phx-footer__menu-item">
-                            <a href="https://www.phoenixreisen.com/kontakt.html" 
+                            <a href="https://www.phoenixreisen.com/kontakt.html"
                                 title="zu unserer Kontaktseite"
                                 class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
@@ -78,7 +79,7 @@ const Footer = {
                             </a>
                         </li>
                         <li class="phx-footer__menu-item">
-                            <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" 
+                            <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html"
                                 title="zu unseren Nutzungsbedingungen"
                                 class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
@@ -86,7 +87,7 @@ const Footer = {
                             </a>
                         </li>
                         <li class="phx-footer__menu-item">
-                            <a href="https://www.phoenixreisen.com/impressum.html" 
+                            <a href="https://www.phoenixreisen.com/impressum.html"
                                 title="zu unserem Impressum"
                                 class="phx-footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
@@ -104,6 +105,4 @@ const Footer = {
     },
 };
 
-if(typeof module !== 'undefined') {
-    module.exports = Footer;
-}
+export default Footer;
