@@ -15,10 +15,10 @@ npm install --save @phoenixreisen/footer
 ## Anwendung
 
 ```js
-// oder ES6+
+// entweder ES6+
 import Footer from '@phoenixreisen/footer';
 
-// entweder CommonJS
+// oder CommonJS
 const Footer = require('@phoenixreisen/footer');
 ```
 
@@ -45,9 +45,7 @@ npm run test
 ## Deployment
 
 ```bash
-[npm install]
-[npm run test]
-
+[npm install]                       # Abhängigkeiten installieren
 npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
 npm publish                         # upload to npm
 git push

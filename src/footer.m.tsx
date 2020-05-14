@@ -1,10 +1,19 @@
 import Config from './config';
+import m from 'mithril';
 
-export const Footer = {
+interface PropTypes {
+    env?: string,
+    headline?: string,
+    urls?: {[name: string]: string},
+}
 
-    view: (v) => {
-        const { urls:interns } = Config;
-        const { headline, env, urls:externs } = v.attrs;
+export const Footer: m.Component<PropTypes> = {
+
+    view: ({attrs}) => {
+        const {urls:interns} = Config;
+        const {headline, env, urls:externs} = attrs;
+
+        // defaults mit ext. Parametern mergen
         const urls = Object.assign({}, interns, externs);
 
         return (
