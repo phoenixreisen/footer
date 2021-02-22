@@ -1,15 +1,30 @@
 import Config from './config';
 import m from 'mithril';
 
-interface PropTypes {
+//--- Icons -----
+
+import ICON_TV from './icons/tv.png';
+import ICON_YT from './icons/youtube.png';
+import ICON_FB from './icons/facebook.png';
+import ICON_QG from './icons/QG-Logo.png';
+import ICON_DRV from './icons/DRV-Logo.png';
+import ICON_INSTA from './icons/instagram.png';
+import ICON_TWITTER from './icons/twitter.png';
+import ICON_PHX from './icons/phoenixreisen.jpg';
+import ICON_HASH from './icons/insta-hashtag.png';
+
+//--- Types -----
+interface Attrs {
     env?: string,
     headline?: string,
     urls?: {[name: string]: string},
 }
 
-export const Footer: m.Component<PropTypes> = {
+//--- Komponente -----
 
-    view: ({attrs}) => {
+export const Footer: m.Component<Attrs> = {
+
+    view: ({attrs}: m.Vnode<Attrs>) => {
         const {urls:interns} = Config;
         const {headline, env, urls:externs} = attrs;
 
@@ -17,30 +32,30 @@ export const Footer: m.Component<PropTypes> = {
         const urls = Object.assign({}, interns, externs);
 
         return (
-            <footer class={`phx-footer ${env && env === 'staging' ? 'staging' : ''}`}>
+            <footer class={`footer ${env && env === 'staging' ? 'staging' : ''}`}>
                 <div class="social-media">
                     <div class="mb1"><strong>{headline || 'Sie finden uns auch auf'}</strong></div>
                     <div class="social-media__icons">
                         <a href={urls.PHXWEBSITE} class="social-media__icon desktop-only" title="Phoenix Reisen" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/phoenixreisen.jpg')} alt="Phoenix Reisen Website" />
+                            <img src={ICON_PHX} alt="Phoenix Reisen Website" />
                         </a>
                         <a href={urls.FACEBOOK} class="social-media__icon" title="Phoenix Reisen TV auf Facebook" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/facebook.png')} alt="Phoenix Reisen TV auf Facebook" />
+                            <img src={ICON_FB} alt="Phoenix Reisen TV auf Facebook" />
                         </a>
                         <a href={urls.YOUTUBE} class="social-media__icon" title="Phoenix Reisen TV auf YouTube" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/youtube.png')} alt="Phoenix Reisen TV auf YouTube" />
+                            <img src={ICON_YT} alt="Phoenix Reisen TV auf YouTube" />
                         </a>
                         <a href={urls.PHXTV} class="social-media__icon" title="Phoenix TV" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/tv.png')} alt="Phoenix TV" />
+                            <img src={ICON_TV} alt="Phoenix TV" />
                         </a>
                         <a href={urls.INSTAGRAM} class="social-media__icon" title="Phoenix Reisen auf Instagram" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/instagram.png')} alt="Phoenix Reisen auf Instagram" />
+                            <img src={ICON_INSTA} alt="Phoenix Reisen auf Instagram" />
                         </a>
                         <a href={urls.INSTAGRAM_HASHTAG} class="social-media__icon" title="Impressionen unserer Gäste" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/insta-hashtag.png')} alt="Impressionen unserer Gäste - #phoenixreisen" />
+                            <img src={ICON_HASH} alt="Impressionen unserer Gäste - #phoenixreisen" />
                         </a>
                         <a href={urls.TWITTER} class="social-media__icon" title="Phoenix Reisen auf Twitter" target="_blank" rel="noopener noreferrer">
-                            <img src={require('./icons/twitter.png')} alt="Phoenix Reisen auf Twitter" />
+                            <img src={ICON_TWITTER} alt="Phoenix Reisen auf Twitter" />
                         </a>
                     </div>
                 </div>
@@ -53,60 +68,60 @@ export const Footer: m.Component<PropTypes> = {
                         <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
                     </div>
                 </div>
-                <div class="wrapper wrapper--large phx-footer__wrapper">
-                    <ul class="phx-footer__menu noprint">
-                        <li class="phx-footer__menu-item">
+                <div class="wrapper wrapper--large footer__wrapper">
+                    <ul class="footer__menu noprint">
+                        <li class="footer__menu-item">
                             <a href="https://www.phoenixreisen.com/profibereich.html"
                                 title="zum Reisebüro-/Profibereich"
-                                class="phx-footer__menu-link">
+                                class="footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Reisebüro-/Profibereich
                             </a>
                         </li>
-                        <li class="phx-footer__menu-item">
+                        <li class="footer__menu-item">
                             <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html"
                                 title="zu unseren AGB"
-                                class="phx-footer__menu-link">
+                                class="footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 AGB
                             </a>
                         </li>
-                        <li class="phx-footer__menu-item">
+                        <li class="footer__menu-item">
                             <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html"
                                 title="zu unserer Datenschutzerklärung"
-                                class="phx-footer__menu-link">
+                                class="footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Datenschutzerklärung
                             </a>
                         </li>
-                        <li class="phx-footer__menu-item">
+                        <li class="footer__menu-item">
                             <a href="https://www.phoenixreisen.com/kontakt.html"
                                 title="zu unserer Kontaktseite"
-                                class="phx-footer__menu-link">
+                                class="footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Kontakt
                             </a>
                         </li>
-                        <li class="phx-footer__menu-item">
+                        <li class="footer__menu-item">
                             <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html"
                                 title="zu unseren Nutzungsbedingungen"
-                                class="phx-footer__menu-link">
+                                class="footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Nutzungsbedingungen
                             </a>
                         </li>
-                        <li class="phx-footer__menu-item">
+                        <li class="footer__menu-item">
                             <a href="https://www.phoenixreisen.com/impressum.html"
                                 title="zu unserem Impressum"
-                                class="phx-footer__menu-link">
+                                class="footer__menu-link">
                                 <i class="fa fa-angle-right"></i>
                                 Impressum
                             </a>
                         </li>
                     </ul>
-                    <div class="phx-footer__logos">
-                        <span class="phx-footer__logo"><img src={require('./icons/DRV-Logo.png')} /></span>
-                        <span class="phx-footer__logo"><img src={require('./icons/QG-Logo.svg')} /></span>
+                    <div class="footer__logos">
+                        <span class="footer__logo"><img src={ICON_DRV} /></span>
+                        <span class="footer__logo"><img src={ICON_QG} /></span>
                     </div>
                 </div>
             </footer>
