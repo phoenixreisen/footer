@@ -1,8 +1,12 @@
 # Phoenix Footer
 
-Prinzipiell soll diese Komponente den Standard-Footer für diverse (standalone) Phoenix-Services bereitstellen.
+Standard-Footer für diverse (standalone) Phoenix-Applikationen bereitstellen.
 
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
+
+## Demo
+
+https://phoenixreisen.github.io/footer/
 
 ## Anwendung
 
@@ -14,17 +18,11 @@ npm install --save @phoenixreisen/footer
 
 ## Anwendung
 
-```js
-// entweder ES6+
-import Footer from '@phoenixreisen/footer';
-
-// oder CommonJS
-const Footer = require('@phoenixreisen/footer');
-```
-
 #### Aufruf
 
-```js
+```ts
+import Footer from '@phoenixreisen/footer';
+
 <Footer headline="für etwas Vorfreude" env="[staging|production]" />
 
 //oder
@@ -38,7 +36,6 @@ Wird für `env` "staging" angegeben, wird `border-top` gelb eingefärbt.
 
 ```bash
 [npm install]
-
 npm run test
 ```
 
@@ -50,3 +47,15 @@ npm version [major|minor|patch]     # increase version x.x.x => major.minor.patc
 npm publish                         # upload to npm
 git push
 ```
+
+## Github Page
+
+Demo kann manuell mittels Rollup gebaut werden und liegt komplett in `/docs`.
+
+```bash
+[npm install]
+npm run compile:example
+```
+
+Nach `git push` automatisch zu erreichen unter:
+https://phoenixreisen.github.io/footer/
