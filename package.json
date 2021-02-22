@@ -8,12 +8,14 @@
   "module": "src/footer.m.tsx",
   "scripts": {
     "prepublish": "npm test",
-    "test": "ospec --preload ./test-setup",
+    "publish:example": "npx gh-pages -d example",
+    "compile:example": "npx rollup -c",
     "compile:ts": "npx tsc --build tsconfig.json",
     "compile:js": "npx babel ./dist/ --out-dir ./test/",
     "compile:scss": "npx sass --no-source-map ./src:./dist",
     "copy:img": "npx copyfiles -f ./src/icons/* ./dist/icons",
-    "pretest": "del-cli ./dist && npm run copy:img && npm run compile:ts && npm run compile:js && npm run compile:scss",
+    "pretest": "del-cli ./dist && npm run copy:img && npm run compile:ts && npm run compile:js && npm run compile:scss && npm run compile:example",
+    "test": "ospec --preload ./test-setup.js",
     "posttest": "del-cli ./test"
   },
   "author": "Phoenix Reisen <it@phoenixreisen.com>",
@@ -30,19 +32,26 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
-    "@types/mithril": "^2.0.2",
+    "@types/mithril": "^2.0.3",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-file-loader": "^2.0.0",
-    "babel-plugin-inline-svg": "^1.0.1",
+    "babel-plugin-inline-svg": "^1.1.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "del-cli": "^3.0.0",
-    "jsdom": "^16.2.2",
+    "del-cli": "^3.0.1",
+    "gh-pages": "^3.1.0",
+    "jsdom": "^16.4.0",
     "mithril-node-render": "^3.0.0",
     "mithril-query": "^3.1.0",
     "ospec": "^4.1.1",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.2"
+    "rollup": "^2.26.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-url": "^3.0.1",
+    "tslib": "^2.0.1",
+    "typescript": "^4.1.5"
   }
 }
