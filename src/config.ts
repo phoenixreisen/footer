@@ -1,9 +1,9 @@
-interface PropTypes {
+interface ConfigProps {
     headline: string,
     urls: {[name: string]: string},
 };
 
-export const Config: PropTypes = {
+export const Config: ConfigProps = {
     "headline": "Sie finden uns auch auf",
     "urls": {
         "PHXTV": "https://www.phoenixreisen.tv/",
