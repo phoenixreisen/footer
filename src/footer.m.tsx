@@ -14,6 +14,7 @@ import ICON_PHX from './icons/phoenixreisen.jpg';
 import ICON_HASH from './icons/insta-hashtag.png';
 
 //--- Types -----
+
 interface Attrs {
     env?: string,
     headline?: string,
