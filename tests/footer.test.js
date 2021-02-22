@@ -51,6 +51,17 @@ test.spec('Oberflächencheck', () => {
         test(rendered2.should.not.contain('Sie finden uns auch auf')).equals(true);
     });
 
+    test('Bestimmte CSS-Styling-Klassen sollten gesetzt sein', () => {
+        test(footer.should.have(1, '.footer')).equals(true);
+        test(footer.should.have(1, '.social-media')).equals(true);
+        test(footer.should.have(1, '.social-media__icons')).equals(true);
+        test(footer.should.have(7, '.social-media__icon')).equals(true);
+        test(footer.should.have(1, '.social-contact')).equals(true);
+        test(footer.should.have(1, '.footer__menu')).equals(true);
+        test(footer.should.have(6, '.footer__menu-item')).equals(true);
+        test(footer.should.have(1, '.footer__logos')).equals(true);
+    })
+
     test('Social Media Links sind (irgendwo) gesetzt', () => {
         test(footer.should.have(`a[href="${Config.urls.PHXTV}"]`)).equals(true);
         test(footer.should.have(`a[href="${Config.urls.TWITTER}"]`)).equals(true);
