@@ -1,3 +1,5 @@
+/** @jsx m */
+
 import Config from './config';
 import m from 'mithril';
 
