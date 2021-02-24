@@ -53,12 +53,10 @@ test.spec('Oberflächencheck', () => {
 
     test('Bestimmte CSS-Styling-Klassen sollten gesetzt sein', () => {
         test(footer.should.have(1, '.footer')).equals(true);
-        test(footer.should.have(1, '.social-media')).equals(true);
-        test(footer.should.have(1, '.social-media__icons')).equals(true);
-        test(footer.should.have(7, '.social-media__icon')).equals(true);
-        test(footer.should.have(1, '.social-contact')).equals(true);
-        test(footer.should.have(1, '.footer__menu')).equals(true);
-        test(footer.should.have(6, '.footer__menu-item')).equals(true);
+        test(footer.should.have(1, '.footer__media-links')).equals(true);
+        test(footer.should.have(1, '.footer__media-icons')).equals(true);
+        test(footer.should.have(1, '.footer__text')).equals(true);
+        test(footer.should.have(1, '.footer__links')).equals(true);
         test(footer.should.have(1, '.footer__logos')).equals(true);
     })
 
